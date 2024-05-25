@@ -9,5 +9,8 @@ in this project I have learned many things
 - Tailwaind Css 
 - FireBase
 - Many thing More 
-
+- handle event funtionality nesting onchange
+- handle eye funtionality
+- handle
+- form validation with regex
 And Stay with me , Many thing will coming . This is a Big Project . 👁️ Keep Watching 👁️.
