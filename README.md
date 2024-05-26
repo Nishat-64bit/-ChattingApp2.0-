@@ -19,5 +19,10 @@ in this project I have learned many things
 - form validation with 2.password (kew jate weak password na dei )  
 - very important password ==>
 - regex  = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&.\-+*/])[A-Za-z\d@$!%*?&.\-+*/]{8,}$/  copy  
+- after succesfully registration delete data from state and input field
+- loader and its functionality 
+- sent verification email using firebase
+- sent alert using toastify
+
       
 And Stay with me , Many thing will coming . This is a Big Project . 👁️ Keep Watching 👁️.
