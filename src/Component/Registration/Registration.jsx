@@ -248,7 +248,7 @@ const Registration = () => {
 
                 {/* eye button start */}
                 <div
-                  className="absolute top-[53%] right-[3%] text-dark-blue opacity-30"
+                  className="absolute top-[53%] right-[3%] text-dark-blue opacity-30 cursor-pointer"
                   // ======================= Handle Eye Functionality ========================= //
                   onClick={handleEye} /// ! direct func call na kore setEye(!Eye) korte paren
                   // ======================= Handle Eye Functionality ========================= //
