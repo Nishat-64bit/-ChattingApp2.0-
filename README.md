@@ -34,6 +34,10 @@ in this project I have learned many things
 - use tostify to show that the verification mail link is sent 
 - use tostify to show error when someone register but again want to sign up
 - use a function when use successfully input all field and successfully this data goes to firebase use all things in a function when sign up or regestration btn click it.
+- make a pages folder under src and make file name regestrationPages then import the component named regestration . so now the main pages is regestrationpages , now import it to the app.jsx and remove the older one named regestration component . 
+
+- oke now we make login page , so make login folder under component and make file login.jsx and import it to the login page and import login page to the app.jsx file 
+- so now we have multiple pages , so how should we navigate them ==> React Router Dom ==> next class
 
  
 And Stay with me , Many thing will coming . This is a Big Project . 👁️ Keep Watching 👁️.
