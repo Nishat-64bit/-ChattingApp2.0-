@@ -5,7 +5,7 @@ import {
   sendEmailVerification,
 } from "firebase/auth";
 import RegistrationImg from "../../assets/RegistrationImg.png";
-import { ToastContainer, toast, Bounce } from 'react-toastify';
+import { ToastContainer, toast, Bounce } from "react-toastify";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
@@ -20,6 +20,7 @@ const Registration = () => {
   const [Password, SetPassword] = useState("");
   const [Eye, setEye] = useState(false); // use state value = Eye
   const [loading, setloading] = useState(false);
+  const [regestration, setregestration] = useState("");
   //? ================ useState Hook ======================= //
 
   //* ================ Error useState Hook ======================= //
@@ -40,21 +41,13 @@ const Registration = () => {
 
   // ======================= Handle Email Functionality ========================= //
   //  const HandleEmail = (event)=>{
-  //     SetEmail(event.target.value);
+  //     SetEmail(event.target.value); 
+  // As same as Fullname / Password but we dont need this method cause we nest them in onchange func
+
   //  }
   // ======================= Handle Email Functionality ========================= //
 
-  // ======================= Handle Name Functionality ========================= //
-  // const HandleName = (event)=>{
-  //     SetFullName(event.target.value)
-  // }
-  // ======================= Handle Name Functionality ========================= //
-
-  // ======================= Handle Password Functionality ========================= //
-  // const HandlePassword=(event)=>{
-  //     SetPassword(event.target.value)
-  // }
-  // ======================= Handle Password Functionality ========================= //
+  
 
   //? ======================= Handle eye Functionality start ========================= //
   const handleEye = () => {
@@ -74,8 +67,12 @@ const Registration = () => {
   //console.log(PasswordRegex.test(password1));
   //*======================= Regex Email & Password Functionality end ========================= //
 
-  //* ======================= Handle signup Functionality ========================= //
-  const handleSignup = () => {
+  
+  
+  // Regestration Page
+  function handleRegestration() {
+    //* ======================= Handle signup Functionality ========================= //
+// ! user input dibe start //
     if (!Email) {
       setEmailError("Email Credential Missing Or Wrong ⚠️");
     } else if (!EmailRegex.test(Email)) {
@@ -98,47 +95,62 @@ const Registration = () => {
       setFullNameError("");
       setPasswordError("");
       //console.log("everything is oke");
-    }
-  };
-  // console.log(EmailError,FullNameError,PasswordError);
-  //*======================= Handle signup Functionality ========================= //
-  //? user jodi succesfully login kore mane valid sobkicu means email,password  dei ===>
-
-  //?=======================  signup  new use Firebase start ========================= //
-  createUserWithEmailAndPassword(auth, Email, Password)
-    .then((userCredential) => {
-      console.log(userCredential);
-      sendEmailVerification(auth.currentUser).then(() => {
-        toast.success('Email Verification Link Sent', {
-          position: "top-right",
-          autoClose: 10000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "dark",
-          transition: Bounce,
+      // ! user input dibe end //  
+      //*======================= Handle signup Functionality End ========================= //
+      //? user jodi succesfully input fill up  kore mane valid sobkicu dei  (email,password )  dei ===>
+         //?=======================  signup  new user Firebase start ========================= //
+      createUserWithEmailAndPassword(auth, Email, Password)
+        .then((userCredential) => {
+          console.log(userCredential);
+          // send mail 
+          sendEmailVerification(auth.currentUser).then(() => {
+            setloading(false);
+            toast.success("Email Verification Link Sent", {
+              position: "top-right",
+              autoClose: 10000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+            console.log("verification mail sent");
           });
-        console.log("verification mail sent");
-      });
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .finally(() => {
-      setloading(false);
-    });
-
-    // const user = auth.currentUser;
-    // console.log(user.email);
-    // console.log(user.emailVerified);
+        })
+        .catch((error) => {
+          setloading(false)
+          if (
+            error.message === "Firebase: Error (auth/email-already-in-use)."
+          ) {
+            toast.warn(`Email Already In Use `, {
+              position: "top-right",
+              autoClose: 20000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+              transition: Bounce,
+            });
+          }
+        })
+        .finally(() => {
+          // setloading(false); //acca
+        });
+    }
+  }
+  // const user = auth.currentUser;
+  // console.log(user.email);
+  // console.log(user.emailVerified);
   //?=======================  signup  new use Firebase end   ========================= //
 
   // ======================= All handle Functionality End ========================= //
   return (
     <>
-      <ToastContainer/>
+      <ToastContainer />
       <div className=" flex justify-between items-center">
         <div className="  w-1/2 h-fullvh flex justify-center items-center ">
           <div>
@@ -261,7 +273,7 @@ const Registration = () => {
                 type="submit"
                 className="w-full py-5 rounded-[86px] bg-btnColor text-white text-xl font-normal mt-3 font-Nunito relative"
                 // ======================= Handle login / signup Functionality ========================= //
-                onClick={handleSignup}
+                onClick={handleRegestration}
                 // ======================= Handle login / signup Functionality ========================= //
               >
                 {/* loader functionality start */}

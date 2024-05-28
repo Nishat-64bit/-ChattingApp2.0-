@@ -32,5 +32,8 @@ in this project I have learned many things
 - after successful signup delete data from state and input field
 - sent verification mail using firebase
 - use tostify to show that the verification mail link is sent 
+- use tostify to show error when someone register but again want to sign up
+- use a function when use successfully input all field and successfully this data goes to firebase use all things in a function when sign up or regestration btn click it.
+
  
 And Stay with me , Many thing will coming . This is a Big Project . 👁️ Keep Watching 👁️.
