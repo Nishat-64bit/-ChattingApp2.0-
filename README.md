@@ -55,6 +55,7 @@ in this project I have learned many things
 - and obbosoe auth provider firebase e google ke enable kore niben 
 - oke kew jodi google or successfully mail and pass dea jeta reg korse seta dia login kore tobe se je jono next page i,e home page e jai 
 - aer jonno use react router dom navigate 
+- and also google dia log in korleo jen navigate korte pare 
 
 
 
