@@ -39,5 +39,24 @@ in this project I have learned many things
 - oke now we make login page , so make login folder under component and make file login.jsx and import it to the login page and import login page to the app.jsx file 
 - so now we have multiple pages , so how should we navigate them ==> React Router Dom ==> next class
 
+- install react router dom
+- configure react router dom to app.jsx to navigate multipale page
+- make login page and paste the form layout from regestration page to save time
+- now make nesting usestate i,e use state e object nia kibabe kaj kora jai  for all input field
+- and ekta handler nia sob state eksate samlabo 
+- react router dom er link component use kore page navigation kora jai
+- userid token save kono je succesfully regester then login korse tar user id => userinfo._tokenResponse.idToken 
+- localstroge db te store korte hobe ex : localStorage.setItem("UserToken",userinfo._tokenResponse.idToken)
+                                                           // console.log(userinfo._tokenResponse.idToken);
+- kibabe localstroge check korbo ?
+- go to application => local storge 
+- Now comes Login With google part ==>
+- firbase auth with google 
+- and obbosoe auth provider firebase e google ke enable kore niben 
+- oke kew jodi google or successfully mail and pass dea jeta reg korse seta dia login kore tobe se je jono next page i,e home page e jai 
+- aer jonno use react router dom navigate 
+
+
+
  
 And Stay with me , Many thing will coming . This is a Big Project . 👁️ Keep Watching 👁️.

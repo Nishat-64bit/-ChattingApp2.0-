@@ -8,6 +8,7 @@ import RegistrationImg from "../../assets/RegistrationImg.png";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
   //? ================ Firebase Hook start ======================= //
@@ -290,14 +291,14 @@ const Registration = () => {
               {/* button end */}
             </form>
 
-            {/* sign in start & registration functionality */}
+            {/* sign UP start & LOGIN  functionality */}
             <h3 className="text-center font-OpenSans font-normal text-[#03014C] text-sm mt-4">
               Already have an account?
               <span className="text-[#EA6C00] ml-1 cursor-pointer hover:underline hover:decoration-dark-blue ">
-                Sign in
+                <Link to={"/login"} className="hover:underline hover:decoration-dark-blue">Sign In</Link>
               </span>
             </h3>
-            {/* sign in End & registration functionality  */}
+            {/* sign UP End & LOGIN functionality  */}
           </div>
         </div>
         <div className=" w-1/2 h-fullvh">
