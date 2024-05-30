@@ -8,12 +8,14 @@ import RegistrationImg from "../../assets/RegistrationImg.png";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import { FaRegEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Registration = () => {
   //? ================ Firebase Hook start ======================= //
   const auth = getAuth();
   //? ================ Firebase Hook end ======================= //
+    //react router navigate
+    const navigate = useNavigate();
 
   //? ================ useState Hook ======================= //
   const [Email, SetEmail] = useState("");
@@ -21,7 +23,6 @@ const Registration = () => {
   const [Password, SetPassword] = useState("");
   const [Eye, setEye] = useState(false); // use state value = Eye
   const [loading, setloading] = useState(false);
-  const [regestration, setregestration] = useState("");
   //? ================ useState Hook ======================= //
 
   //* ================ Error useState Hook ======================= //
@@ -108,7 +109,7 @@ const Registration = () => {
             setloading(false);
             toast.success("Email Verification Link Sent", {
               position: "top-right",
-              autoClose: 10000,
+              autoClose: 2000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
@@ -117,6 +118,9 @@ const Registration = () => {
               theme: "dark",
               transition: Bounce,
             });
+            setTimeout(() => {
+              navigate('/login')
+            }, 3000);
             console.log("verification mail sent");
           });
         })

@@ -2,6 +2,7 @@ import React from 'react'
 import RegestrationPages from './Pages/RegestrationPages'
 import LoginPage from './Pages/LoginPage';
 import HomePages from './Pages/HomePages';
+import EmailVerified from './Component/Home/EmailVerified';
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -16,7 +17,7 @@ const router = createBrowserRouter(
     <Route path='reg' element={<RegestrationPages/>}/>
     <Route path='login' element={<LoginPage/>}/>
     <Route path='home' element={<HomePages/>}/>
-    
+    <Route path='email-verify' element={<EmailVerified/>}/>
     <Route path='*' element = {<h1>Error page</h1>}/> {/* suppose  jodi amr contact page na theke tar por navigate korle Erro page leka  dekabe  */}
     </>
   )

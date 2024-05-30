@@ -56,6 +56,13 @@ in this project I have learned many things
 - oke kew jodi google or successfully mail and pass dea jeta reg korse seta dia login kore tobe se je jono next page i,e home page e jai 
 - aer jonno use react router dom navigate 
 - and also google dia log in korleo jen navigate korte pare 
+- oke ekane je regestration korlo ta ke ekta verified link patano hoise , then se login korlo tar gmail and  pass dea . ta ke homepage e nia gelam , ekon dekte hobe user ki verfied link kore true hoise kina 
+- hompage e userverfied kina Get a [Get the currently signed-in user]
+- oke ami cie homepage asar age mane reload hoaar agei se amr email ta verfied kina seta check korbe. 
+- aer jonno use useeffect hook 
+- now user jodi useeffect e false hoi tahole ta ke email verfied page e nea jabe tar mane ekta page ba component koren verify email name seta ke app.jsx import and route koran 
+
+
 
 
 
